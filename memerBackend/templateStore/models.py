@@ -4,7 +4,7 @@ from PIL import Image
 # Create your models here.
 class MemeTemplate(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='templates/')
+    image = models.ImageField(upload_to='templates/',max_length=255)
     width = models.PositiveIntegerField(null=True, blank=True)
     height = models.PositiveIntegerField(null=True, blank=True)
     box_count = models.PositiveIntegerField(default=0)
